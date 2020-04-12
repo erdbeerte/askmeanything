@@ -1,0 +1,9 @@
+function answer() {
+    let inputText = document.getElementById("inputtext");
+    let answerdiv = document.getElementById("answerid");
+
+    if (inputText.value != '') {
+        answerdiv.hidden = false;
+        inputText.value = '';
+    }
+}
