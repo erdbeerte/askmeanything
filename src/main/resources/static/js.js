@@ -4,6 +4,13 @@ function answer() {
 
     if (inputText.value != '') {
         answerdiv.hidden = false;
-        inputText.value = '';
     }
+}
+
+function clearInput() {
+    let inputText = document.getElementById("inputtext");
+    let answerdiv = document.getElementById("answerid");
+
+    inputText.value = '';
+    answerdiv.hidden = true;
 }
