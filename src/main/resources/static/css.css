@@ -43,9 +43,5 @@ div {
     color: #FF0000;
     height: 50px;
     width: 125px;
-}
-
-.button:hover {
-    border-color: rgba(255, 255, 255, 1);
-    cursor: pointer;
+    cursor: url('/img/pointer.png'), pointer;
 }
