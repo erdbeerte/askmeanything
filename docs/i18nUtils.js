@@ -3,7 +3,7 @@ $(document).ready(function () {
     var defaultLang = 'en';
     $('[i18n]').i18n({
         defaultLang: defaultLang,
-        filePath: '/i18n/',
+        filePath: '/askmeanything/i18n/',
         filePrefix: 'i18n_',
         fileSuffix: '',
         forever: true,
@@ -14,21 +14,21 @@ $(document).ready(function () {
     $('.es').click(function () {
         $('[i18n]').i18n({
             defaultLang: 'es',
-            filePath: '/i18n/'
+            filePath: '/askmeanything/i18n/'
         });
         window.selectedLan = 'es';
     });
     $('.en').click(function () {
         $('[i18n]').i18n({
             defaultLang: 'en',
-            filePath: '/i18n/'
+            filePath: '/askmeanything/i18n/'
         });
         window.selectedLan = 'en';
     });
     $('.de').click(function () {
         $('[i18n]').i18n({
             defaultLang: 'de',
-            filePath: '/i18n/'
+            filePath: '/askmeanything/i18n/'
         });
         window.selectedLan = 'de';
     });
