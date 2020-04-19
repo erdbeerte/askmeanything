@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    window.selectedLan = 'en';
     var defaultLang = 'en';
     $('[i18n]').i18n({
         defaultLang: defaultLang,
@@ -15,17 +16,20 @@ $(document).ready(function () {
             defaultLang: 'es',
             filePath: '/i18n/'
         });
+        window.selectedLan = 'es';
     });
     $('.en').click(function () {
         $('[i18n]').i18n({
             defaultLang: 'en',
             filePath: '/i18n/'
         });
+        window.selectedLan = 'en';
     });
     $('.de').click(function () {
         $('[i18n]').i18n({
             defaultLang: 'de',
             filePath: '/i18n/'
         });
+        window.selectedLan = 'de';
     });
 });
