@@ -4,23 +4,31 @@
 <head>
     <title>CoranaFAQ</title>
 </head>
-
-<body class="background-black">
+<script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="js.js"></script>
+<script type="text/javascript" src="jquery.i18n.min.js"></script>
+<script type="text/javascript" src="i18nUtils.js"></script>
 <link rel="stylesheet" type="text/css" href="css.css">
+<link rel="shortcut icon" href="/favicon.ico"/>
+<body class="background-black">
 <div>
+    <div class="div-lan-btn">
+        <button type="button" class="lan-button es">ES</button>
+        <button type="button" class="lan-button en">EN</button>
+        <button type="button" class="lan-button de">DE</button>
+    </div>
     <div>
-        <span class="fontstyle">¿Por qué (no) </span>
+        <span i18n="question" class="fontstyle">¿Por qué (no) </span>
         <input id="inputtext" class="inputstyle" type="text"/>
         <span class="fontstyle">?</span>
-        <button class="button" onclick="answer()">Send</button>
-        <button class="button" onclick="clearInput()">Clear</button>
+        <span class="div-act-btn">
+            <button i18n="send-button" class="button" onclick="answer()">Send</button>
+            <button i18n="clear-button" class="button" onclick="clearInput()">Clear</button>
+        </span>
     </div>
     <div>
-        <div class="answerred" id="answerid" hidden=true>Por el CoronaVirus</div>
+        <div i18n="message" class="answerred" id="answerid" hidden=true>Por el CoronaVirus</div>
     </div>
 </div>
-
 </body>
-
 </html>
