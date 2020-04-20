@@ -10,12 +10,13 @@
 <script type="text/javascript" src="i18nUtils.js"></script>
 <link rel="stylesheet" type="text/css" href="css.css">
 <link rel="shortcut icon" href="/favicon.ico"/>
-<body class="background-black">
+<body class="background-black" onload="startTimer()">
 <div>
     <div class="div-lan-btn">
         <button type="button" class="lan-button es">ES</button>
         <button type="button" class="lan-button en">EN</button>
         <button type="button" class="lan-button de">DE</button>
+        <span id="timer"/>
     </div>
     <div>
         <span i18n="question" class="fontstyle">¿Por qué (no) </span>
