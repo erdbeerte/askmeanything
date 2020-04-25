@@ -16,7 +16,7 @@ function clearInput() {
     answerdiv.hidden = true;
 }
 
-function speak () {
+function speak() {
     let text = '';
     if (window.selectedLan === 'es') {
         text = 'Por el corona virus';
@@ -33,7 +33,7 @@ function speak () {
     speechSynthesis.speak(utterance);
 }
 
-function timeCalculate () {
+function timeCalculate() {
     let deadline = new Date('03/14/2020 20:00 GMT-0800');
     let now = new Date();
     let diff = now - deadline;
@@ -42,15 +42,34 @@ function timeCalculate () {
     let min = Math.floor(diff_seg / 60) % 60;
     let hr = Math.floor(diff_seg / 3600) % 24;
     let day = Math.floor(diff_seg / 86400);
-    let text = day + 'dias ' + hr + 'h ' + min + 'm ' + seg + 's' + ' de encerramiento';
-    document.getElementById('timer').innerHTML = text;
+
+    let textDay = ['dias', 'days', 'Tage'];
+    let textEvent = ['de encerramiento', ' being locked-up', 'in Quarentäne'];
+
+    let valueDay = '';
+    let valueEvent = '';
+
+    if (window.selectedLan === 'es') {
+        valueDay = textDay[0];
+        valueEvent = textEvent[0];
+    } else if (window.selectedLan === 'en') {
+        valueDay = textDay[1];
+        valueEvent = textEvent[1];
+    } else if (window.selectedLan === 'de') {
+        valueDay = textDay[2];
+        valueEvent = textEvent[2];
+    }
+
+    let text = day + valueDay + ' ' + hr + 'h ' + min + 'm ' + seg + 's ' + valueEvent;
+    let emoji = "<span style='font-size:25px; margin-left: 10px;'>&#128567;</span>";
+    document.getElementById('timer').innerHTML = text + emoji;
 }
 
-function startTimer () {
+function startTimer() {
     console.log('Start timer');
     timeCalculate();
 
-    timer = setInterval(function () {
+    timer = setInterval(function() {
         timeCalculate();
     }, 1000);
 }
